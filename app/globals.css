@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink font-sans antialiased;
+}
+
+::selection {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.section-title {
+  @apply font-serif text-4xl md:text-5xl tracking-tight;
+}
+
+.editorial-link {
+  @apply inline-flex items-center gap-3 text-sm uppercase tracking-wide text-ink transition-all;
+}
+
+.editorial-link span {
+  @apply block h-px w-10 bg-ink transition-all;
+}
+
+.editorial-link:hover span {
+  @apply w-16;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fadeInUp 1s ease forwards;
+}
